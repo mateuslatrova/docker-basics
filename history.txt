@@ -1,0 +1,9 @@
+# Exercicio 1:
+docker build -t test . # teste inicial após criar Dockerfile
+docker build -t exercicio . # depois de ter alterado o Dockerfile corretamente
+docker run exercicio -p 80:8000 # errei
+docker run -p 80:8000 exercicio # errei
+docker run -p 8000:80 exercicio # acertei
+
+# Exercicio 2
+docker run -v $(pwd):/usr/src/pages/ -p 8000:80 exercicio
